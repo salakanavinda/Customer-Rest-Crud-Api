@@ -1,8 +1,17 @@
 package com.Navinda.Customer.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+	
 	private String name;
 	private Integer age;
 	private boolean active;
@@ -31,6 +40,12 @@ public class Customer {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+	
+	
+	
+
+}
+
 	
 	
 	
