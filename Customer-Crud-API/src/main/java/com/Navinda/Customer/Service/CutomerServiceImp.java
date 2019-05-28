@@ -1,11 +1,12 @@
 package com.Navinda.Customer.Service;
 
 import java.util.List;
-
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.Navinda.Customer.Model.Customer;
 import com.Navinda.Customer.Repository.CustomerRepository;
+
 
 public class CutomerServiceImp implements CustomerService {
 
@@ -14,20 +15,26 @@ public class CutomerServiceImp implements CustomerService {
 	
 	@Override
 	public Customer save(Customer customer) {
-		// TODO Auto-generated method stub
+
 		return customerRepository.save(customer);//since this autowired to service
 	}
 
 	@Override
 	public List<Customer> fetch() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return customerRepository.findAll();
 	}
 
 	@Override
 	public Customer fetch(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		//since cannot convert to customer getting from repository
+		Optional<Customer> customer = customerRepository.findById(id);
+		if(customer.isPresent()) {
+			return customer.get();
+		}
+		else {
+			return null;
+		}
 	}
 
 }
