@@ -1,6 +1,10 @@
 Manifest-Version: 1.0
 Implementation-Title: Customer-Crud-API
 Implementation-Version: 0.0.1-SNAPSHOT
-Build-Jdk-Spec: 1.8
+Built-By: user
+Implementation-Vendor-Id: com.Navinda.Customer
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Customer-Crud-API
 Created-By: Maven Integration for Eclipse
 
