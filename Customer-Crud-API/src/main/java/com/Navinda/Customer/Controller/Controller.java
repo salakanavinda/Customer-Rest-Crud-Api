@@ -44,6 +44,11 @@ public class Controller {
 			}
 		}
 	}
+	//delete customer 
+	@RequestMapping(value="/customer/{id}", method=RequestMethod.DELETE)
+	public void deleteCustomer(@PathVariable Integer id) {
+		customrService.deleteCustomerById(id);
+	}
 	
 }
 

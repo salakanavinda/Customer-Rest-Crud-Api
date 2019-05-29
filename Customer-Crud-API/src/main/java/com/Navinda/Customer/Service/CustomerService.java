@@ -9,5 +9,6 @@ public interface CustomerService {
 	Customer save(Customer customer);
 	List<Customer> fetch();
 	Customer fetch(Integer id);
+	void deleteCustomerById(Integer id);//add delete service
 
 }
